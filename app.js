@@ -26,35 +26,12 @@ function buildCharts(sample) {
       var dataTrace = [trace1];
   
       var layout = {
-        title: " The top 10 OTUs",
+        title: "TOP 10 OTUs",
         height: 800,
         width: 900
       };
   
       Plotly.newPlot("bar", dataTrace, layout);
-      //  buble chart
-      var trace1 = {
-        x: otu_ids,
-        y: sample_values,
-        text: otu_labels,
-        mode: 'markers',
-        marker: {
-          color: otu_ids,
-          colorscale: "Greens",
-          size: sample_values
-        }
-      };
-  
-      var data2 = [trace1];
-  
-      var layout = {
-        title: 'Bubble chart that displays each sample',
-        showlegend: false,
-        height: 600,
-        width: 1000
-      };
-  
-      Plotly.newPlot('bubble', data2, layout);
   
     });
   }
